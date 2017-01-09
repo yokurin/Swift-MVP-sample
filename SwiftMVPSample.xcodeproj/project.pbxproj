@@ -42,8 +42,8 @@
 		4AE63C151E23161F00F054A6 = {
 			isa = PBXGroup;
 			children = (
-				4AE63C201E23161F00F054A6 /* SwiftMVPSample */,
 				4AE63C1F1E23161F00F054A6 /* Products */,
+				4AE63C201E23161F00F054A6 /* SwiftMVPSample */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +58,14 @@
 		4AE63C201E23161F00F054A6 /* SwiftMVPSample */ = {
 			isa = PBXGroup;
 			children = (
-				4AE63C211E23161F00F054A6 /* AppDelegate.swift */,
 				4AE63C331E2316F500F054A6 /* Model */,
-				4AE63C351E23170B00F054A6 /* View */,
 				4AE63C341E2316FE00F054A6 /* Presenter */,
-				4AE63C251E23161F00F054A6 /* Main.storyboard */,
+				4AE63C351E23170B00F054A6 /* View */,
+				4AE63C211E23161F00F054A6 /* AppDelegate.swift */,
 				4AE63C281E23161F00F054A6 /* Assets.xcassets */,
-				4AE63C2A1E23161F00F054A6 /* LaunchScreen.storyboard */,
 				4AE63C2D1E23161F00F054A6 /* Info.plist */,
+				4AE63C2A1E23161F00F054A6 /* LaunchScreen.storyboard */,
+				4AE63C251E23161F00F054A6 /* Main.storyboard */,
 			);
 			path = SwiftMVPSample;
 			sourceTree = "<group>";
@@ -76,6 +76,7 @@
 				4AE63C381E231B0800F054A6 /* CountModel.swift */,
 			);
 			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4AE63C341E2316FE00F054A6 /* Presenter */ = {
@@ -84,6 +85,7 @@
 				4AE63C3A1E231B6000F054A6 /* CountPresenter.swift */,
 			);
 			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4AE63C351E23170B00F054A6 /* View */ = {
@@ -92,6 +94,7 @@
 				4AE63C3C1E231B7800F054A6 /* CountViewController.swift */,
 			);
 			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +186,7 @@
 				4AE63C261E23161F00F054A6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		4AE63C2A1E23161F00F054A6 /* LaunchScreen.storyboard */ = {
@@ -191,6 +195,7 @@
 				4AE63C2B1E23161F00F054A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
