@@ -20,6 +20,7 @@ class CountViewController: UIViewController {
     @IBOutlet weak var countUpButton: UIButton!
     
     var countPresenter: CountPresenter?
+    var countModel: CountModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,8 @@ class CountViewController: UIViewController {
     }
     
     private func initialize() {
-        countPresenter = CountPresenter.init(view: self)
+        countModel = CountModel()
+        countPresenter = CountPresenter.init(view: self, model: countModel)
         countPresenter?.initCount()
     }
     
@@ -38,6 +40,13 @@ class CountViewController: UIViewController {
     
     @IBAction func onCountDownButton(_ sender: UIButton) {
         countPresenter?.onCountDown()
+    }
+    
+    // 遷移先のモデルの今使ってるモデルをわたす
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let countVC2 = segue.destination as? CountViewController2 {
+            countVC2.countModel = self.countModel
+        }
     }
     
 }

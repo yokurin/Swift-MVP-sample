@@ -15,6 +15,7 @@ class CountViewController2: UIViewController {
     @IBOutlet weak var countUpButton2: UIButton!
     
     var countPresenter: CountPresenter?
+    var countModel: CountModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class CountViewController2: UIViewController {
     }
     
     private func initialize() {
-        countPresenter = CountPresenter.init(view: self)
+        countPresenter = CountPresenter.init(view: self, model: countModel)
         countPresenter?.initCount()
     }
     

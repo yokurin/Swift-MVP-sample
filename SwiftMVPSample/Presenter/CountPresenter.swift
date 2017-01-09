@@ -14,9 +14,9 @@ class CountPresenter {
     private let view: CountViewProtcol
     private let model: CountModel
         
-    required init(view: CountViewProtcol) {
+    required init(view: CountViewProtcol, model: CountModel) {
         self.view = view
-        self.model = CountModel()
+        self.model = model
     }
 
     func onCountUp(){
