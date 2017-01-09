@@ -14,5 +14,13 @@ class CountModel {
     init() {
         num = 0
     }
+    
+    func countUp() {
+        self.num += 1
+    }
+    
+    func countDown() {
+        self.num -= 1
+    }
 
 }
