@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7E0F231E2357D20097BFF2 /* CountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E0F221E2357D20097BFF2 /* CountViewController2.swift */; };
+		4AAD86BD1E235F3A00E5828A /* CountView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD86BC1E235F3A00E5828A /* CountView.storyboard */; };
+		4AAD86BF1E235F4800E5828A /* CountView2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAD86BE1E235F4800E5828A /* CountView2.storyboard */; };
 		4AE63C221E23161F00F054A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE63C211E23161F00F054A6 /* AppDelegate.swift */; };
 		4AE63C271E23161F00F054A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE63C251E23161F00F054A6 /* Main.storyboard */; };
 		4AE63C291E23161F00F054A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE63C281E23161F00F054A6 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A7E0F221E2357D20097BFF2 /* CountViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController2.swift; sourceTree = "<group>"; };
+		4AAD86BC1E235F3A00E5828A /* CountView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountView.storyboard; sourceTree = "<group>"; };
+		4AAD86BE1E235F4800E5828A /* CountView2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountView2.storyboard; sourceTree = "<group>"; };
 		4AE63C1E1E23161F00F054A6 /* SwiftMVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE63C211E23161F00F054A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE63C261E23161F00F054A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7E0F1F1E2355B00097BFF2 /* CountView */ = {
+			isa = PBXGroup;
+			children = (
+				4AAD86BC1E235F3A00E5828A /* CountView.storyboard */,
+				4AE63C3C1E231B7800F054A6 /* CountViewController.swift */,
+			);
+			name = CountView;
+			sourceTree = "<group>";
+		};
+		4AAD86B91E235D3D00E5828A /* CountView2 */ = {
+			isa = PBXGroup;
+			children = (
+				4AAD86BE1E235F4800E5828A /* CountView2.storyboard */,
+				4A7E0F221E2357D20097BFF2 /* CountViewController2.swift */,
+			);
+			name = CountView2;
+			sourceTree = "<group>";
+		};
 		4AE63C151E23161F00F054A6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +99,6 @@
 			children = (
 				4AE63C381E231B0800F054A6 /* CountModel.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -84,16 +107,15 @@
 			children = (
 				4AE63C3A1E231B6000F054A6 /* CountPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4AE63C351E23170B00F054A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4AE63C3C1E231B7800F054A6 /* CountViewController.swift */,
+				4A7E0F1F1E2355B00097BFF2 /* CountView */,
+				4AAD86B91E235D3D00E5828A /* CountView2 */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -157,9 +179,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAD86BF1E235F4800E5828A /* CountView2.storyboard in Resources */,
 				4AE63C2C1E23161F00F054A6 /* LaunchScreen.storyboard in Resources */,
 				4AE63C291E23161F00F054A6 /* Assets.xcassets in Resources */,
 				4AE63C271E23161F00F054A6 /* Main.storyboard in Resources */,
+				4AAD86BD1E235F3A00E5828A /* CountView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +197,7 @@
 				4AE63C3B1E231B6000F054A6 /* CountPresenter.swift in Sources */,
 				4AE63C221E23161F00F054A6 /* AppDelegate.swift in Sources */,
 				4AE63C391E231B0800F054A6 /* CountModel.swift in Sources */,
+				4A7E0F231E2357D20097BFF2 /* CountViewController2.swift in Sources */,
 				4AE63C3D1E231B7800F054A6 /* CountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +364,7 @@
 				4AE63C321E23161F00F054A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

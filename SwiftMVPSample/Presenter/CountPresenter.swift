@@ -12,8 +12,8 @@ class CountPresenter {
 
     // CountViewProtcol にするとちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
     private let view: CountViewProtcol
-    private var model: CountModel
-    
+    private let model: CountModel
+        
     required init(view: CountViewProtcol) {
         self.view = view
         self.model = CountModel()
@@ -27,6 +27,10 @@ class CountPresenter {
     
     func onCountDown(){
         model.countDown()
+        view.onCountChange(num: model.num)
+    }
+    
+    func initCount() {
         view.onCountChange(num: model.num)
     }
 }

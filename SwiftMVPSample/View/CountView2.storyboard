@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SJy-CX-qfa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Count View Controller2-->
+        <scene sceneID="vDe-kG-tip">
+            <objects>
+                <viewController id="SJy-CX-qfa" customClass="CountViewController2" customModule="SwiftMVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJZ-BN-HbW"/>
+                        <viewControllerLayoutGuide type="bottom" id="yz7-v5-ret"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fv-5M-xAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-Fs-J9N">
+                                <rect key="frame" x="164" y="322" width="46.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4N-MP-Zci">
+                                <rect key="frame" x="50" y="385" width="30" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="＋"/>
+                                <connections>
+                                    <action selector="onCountUpButton2:" destination="SJy-CX-qfa" eventType="touchUpInside" id="hq7-BL-aUQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-4u-Gd4">
+                                <rect key="frame" x="295" y="385" width="30" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="ー"/>
+                                <connections>
+                                    <action selector="onCountDownButton2:" destination="SJy-CX-qfa" eventType="touchUpInside" id="U0m-8E-vrt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y4N-MP-Zci" firstAttribute="leading" secondItem="1fv-5M-xAQ" secondAttribute="leading" constant="50" id="2m3-cc-cZy"/>
+                            <constraint firstItem="hEJ-Fs-J9N" firstAttribute="centerY" secondItem="1fv-5M-xAQ" secondAttribute="centerY" id="2oq-QR-p5J"/>
+                            <constraint firstItem="F0G-4u-Gd4" firstAttribute="top" secondItem="hEJ-Fs-J9N" secondAttribute="bottom" constant="40" id="bvY-d4-7dX"/>
+                            <constraint firstItem="Y4N-MP-Zci" firstAttribute="top" secondItem="hEJ-Fs-J9N" secondAttribute="bottom" constant="40" id="i5G-BM-sfH"/>
+                            <constraint firstItem="hEJ-Fs-J9N" firstAttribute="centerX" secondItem="1fv-5M-xAQ" secondAttribute="centerX" id="rHJ-N0-J1Y"/>
+                            <constraint firstAttribute="trailing" secondItem="F0G-4u-Gd4" secondAttribute="trailing" constant="50" id="vVr-qn-o6G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDownButton2" destination="F0G-4u-Gd4" id="pud-4f-dtX"/>
+                        <outlet property="countLabel2" destination="hEJ-Fs-J9N" id="slF-SZ-V2u"/>
+                        <outlet property="countUpButton2" destination="Y4N-MP-Zci" id="LAW-sS-oXB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2C-pd-tvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="67"/>
+        </scene>
+    </scenes>
+</document>

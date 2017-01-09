@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKt-0c-tvx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Count View Controller-->
+        <scene sceneID="Tjo-75-ZYC">
+            <objects>
+                <viewController id="WKt-0c-tvx" customClass="CountViewController" customModule="SwiftMVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ioX-3w-cIX"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ak-Ea-2b8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9S9-sA-ecz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfl-Dc-3jP">
+                                <rect key="frame" x="164" y="322" width="46.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-Sz-3cf">
+                                <rect key="frame" x="50" y="385" width="30" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="＋"/>
+                                <connections>
+                                    <action selector="onCountUpButton:" destination="WKt-0c-tvx" eventType="touchUpInside" id="pP8-1p-rVr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-2D-wmb">
+                                <rect key="frame" x="295" y="385" width="30" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="ー"/>
+                                <connections>
+                                    <action selector="onCountDownButton:" destination="WKt-0c-tvx" eventType="touchUpInside" id="mVy-yZ-YQi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UE2-bA-pX4">
+                                <rect key="frame" x="172" y="587" width="30" height="30"/>
+                                <state key="normal" title="➡︎"/>
+                                <connections>
+                                    <segue destination="h7M-4l-SIn" kind="show" id="zdg-mm-LB8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zfl-Dc-3jP" firstAttribute="centerY" secondItem="9S9-sA-ecz" secondAttribute="centerY" id="0VX-Jb-9a7"/>
+                            <constraint firstItem="eod-Sz-3cf" firstAttribute="top" secondItem="zfl-Dc-3jP" secondAttribute="bottom" constant="40" id="6Ag-hS-ZAJ"/>
+                            <constraint firstItem="t3e-2D-wmb" firstAttribute="top" secondItem="zfl-Dc-3jP" secondAttribute="bottom" constant="40" id="CC2-fE-Whr"/>
+                            <constraint firstAttribute="trailing" secondItem="t3e-2D-wmb" secondAttribute="trailing" constant="50" id="DWd-4G-6I9"/>
+                            <constraint firstItem="8Ak-Ea-2b8" firstAttribute="top" secondItem="UE2-bA-pX4" secondAttribute="bottom" constant="50" id="bdj-Ww-Jbk"/>
+                            <constraint firstItem="zfl-Dc-3jP" firstAttribute="centerX" secondItem="9S9-sA-ecz" secondAttribute="centerX" id="dPx-U5-lxj"/>
+                            <constraint firstItem="eod-Sz-3cf" firstAttribute="leading" secondItem="9S9-sA-ecz" secondAttribute="leading" constant="50" id="gZn-Gj-nVs"/>
+                            <constraint firstItem="UE2-bA-pX4" firstAttribute="centerX" secondItem="9S9-sA-ecz" secondAttribute="centerX" id="noZ-le-2um"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDownButton" destination="t3e-2D-wmb" id="lbM-Me-4ft"/>
+                        <outlet property="countLabel" destination="zfl-Dc-3jP" id="Cv9-8n-kvU"/>
+                        <outlet property="countUpButton" destination="eod-Sz-3cf" id="gJ2-Rz-m49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2Z-Hn-CDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="12"/>
+        </scene>
+        <!--CountView2-->
+        <scene sceneID="9CT-Ho-q4P">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CountView2" id="h7M-4l-SIn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raI-ED-Wv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811" y="11"/>
+        </scene>
+    </scenes>
+</document>

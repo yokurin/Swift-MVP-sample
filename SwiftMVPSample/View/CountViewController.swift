@@ -29,6 +29,7 @@ class CountViewController: UIViewController {
     
     private func initialize() {
         countPresenter = CountPresenter.init(view: self)
+        countPresenter?.initCount()
     }
     
     @IBAction func onCountUpButton(_ sender: UIButton) {
@@ -42,7 +43,9 @@ class CountViewController: UIViewController {
 }
 
 extension CountViewController: CountViewProtcol {
+    
     internal func onCountChange(num: Int) {
         countLabel.text = String(num)
     }
+    
 }
