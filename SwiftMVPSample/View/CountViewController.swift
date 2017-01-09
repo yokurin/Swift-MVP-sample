@@ -8,7 +8,10 @@
 
 import UIKit
 
-protocol CountView: class {
+// protocol CountView: class {
+// 「CountView」 だけだとUIViewのサブクラスかわからなくなりそうなので「CountViewProtcol」とかにしませんか？
+
+protocol CountViewProtcol {
     func onCountChange(num: Int)
 }
 
@@ -27,7 +30,7 @@ class CountViewController: UIViewController {
     }
     
     private func initialize() {
-        countPresenter = CountPresenterImpl.init(view: self)
+        countPresenter = CountPresenter.init(view: self)
     }
     
     @IBAction func onCountUpButton(_ sender: UIButton) {
@@ -40,7 +43,7 @@ class CountViewController: UIViewController {
     
 }
 
-extension CountViewController: CountView {
+extension CountViewController: CountViewProtcol {
     internal func onCountChange(num: Int) {
         countLabel.text = String(num)
     }
