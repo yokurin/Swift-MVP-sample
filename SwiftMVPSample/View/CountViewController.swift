@@ -8,9 +8,7 @@
 
 import UIKit
 
-// protocol CountView: class {
-// 「CountView」 だけだとUIViewのサブクラスかわからなくなりそうなので「CountViewProtcol」とかにしませんか？
-
+// 「CountView」だとUIViewのサブクラスかわからなくなるので「CountViewProtcol」にする
 protocol CountViewProtcol {
     func onCountChange(num: Int)
 }

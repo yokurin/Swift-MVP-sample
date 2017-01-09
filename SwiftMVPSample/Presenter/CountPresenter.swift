@@ -8,38 +8,24 @@
 
 import Foundation
 
-//protocol CountPresenter: class {
-//    init(view: CountViewController)
-//    
-//    func onCountUp()
-//    func onCountDown()
-//}
-//
-//
-//class CountPresenterImpl: CountPresenter{
-// ここはPresenterの使い方にもよると思うのですが、似たようなPresenterをたくさん作らないのであれば、プロトコルにして抽象的にする必要はないかなと思ったのですがどうです？
-
 class CountPresenter {
 
-    // private let view: CountViewController
-    // ここは CountViewProtcol にするとちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせないですかね？
+    // CountViewProtcol にするとちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
     private let view: CountViewProtcol
     private var model: CountModel
     
-    
-    required init(view: CountViewController) {
+    required init(view: CountViewProtcol) {
         self.view = view
         self.model = CountModel()
     }
 
     func onCountUp(){
-//        model.num += 1
-//        基本モデルの値の変更はモデル内でやります？というのも他からもCountModelを変更できる場合に探しやすくなるかなと思ったので
+        //基本モデルの値の変更はモデル内でやる (他のPresenterからもCountModelを変更する場合がある)
         model.countUp()
         view.onCountChange(num: model.num)
     }
+    
     func onCountDown(){
-//        model.num -= 1
         model.countDown()
         view.onCountChange(num: model.num)
     }
