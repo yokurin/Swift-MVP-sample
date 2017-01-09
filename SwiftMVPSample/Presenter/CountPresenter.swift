@@ -30,7 +30,7 @@ class CountPresenter {
         view.onCountChange(num: model.num)
     }
     
-    func initCount() {
+    func initCountLabel() {
         view.onCountChange(num: model.num)
     }
 }

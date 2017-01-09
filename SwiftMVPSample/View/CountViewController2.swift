@@ -23,9 +23,12 @@ class CountViewController2: UIViewController {
         self.initialize()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        countPresenter?.initCountLabel()
+    }
+    
     private func initialize() {
         countPresenter = CountPresenter.init(view: self, model: countModel)
-        countPresenter?.initCount()
     }
     
     @IBAction func onCountUpButton2(_ sender: UIButton) {
