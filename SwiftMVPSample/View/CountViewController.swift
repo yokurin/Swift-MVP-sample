@@ -8,8 +8,8 @@
 
 import UIKit
 
-// 「CountView」だとUIViewのサブクラスかわからなくなるので「CountViewProtcol」にする
-protocol CountViewProtcol {
+// CountView だと UIView のサブクラスかわからなくなるので CountViewDelegate にする
+protocol CountViewDelegate {
     func onCountChange(num: Int)
 }
 
@@ -55,7 +55,7 @@ class CountViewController: UIViewController {
     
 }
 
-extension CountViewController: CountViewProtcol {
+extension CountViewController: CountViewDelegate {
     
     internal func onCountChange(num: Int) {
         countLabel.text = String(num)

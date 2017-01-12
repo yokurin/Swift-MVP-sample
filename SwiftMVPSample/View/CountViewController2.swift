@@ -41,7 +41,7 @@ class CountViewController2: UIViewController {
     
 }
 
-extension CountViewController2: CountViewProtcol {
+extension CountViewController2: CountViewDelegate {
     internal func onCountChange(num: Int) {
         countLabel2.text = String(num)
     }

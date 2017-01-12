@@ -11,10 +11,10 @@ import Foundation
 class CountPresenter {
 
     // CountViewProtcol にするとちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
-    private let view: CountViewProtcol
+    private let view: CountViewDelegate
     private let model: CountModel
         
-    required init(view: CountViewProtcol, model: CountModel) {
+    required init(view: CountViewDelegate, model: CountModel) {
         self.view = view
         self.model = model
     }
