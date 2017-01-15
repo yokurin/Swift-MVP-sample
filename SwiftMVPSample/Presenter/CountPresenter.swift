@@ -10,7 +10,7 @@ import Foundation
 
 class CountPresenter {
 
-    // CountViewProtcol にするとちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
+    // ちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
     private let view: CountViewDelegate
     private let model: CountModel
         

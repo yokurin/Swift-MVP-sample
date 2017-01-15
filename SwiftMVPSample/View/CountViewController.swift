@@ -8,8 +8,8 @@
 
 import UIKit
 
-// CountView だと UIView のサブクラスかわからなくなるので CountViewDelegate にする
-protocol CountViewDelegate {
+// ~ViewDelegate にする (UIView のサブクラスと区別するため)
+protocol CountViewDelegate: class {
     func onCountChange(num: Int)
 }
 
