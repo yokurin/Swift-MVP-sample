@@ -3,8 +3,8 @@
 Simple Count App with MVP architecture
 
 ## Requirement
-- Xcode v8.2.1
-- Swift3.0
+- Xcode v9.2
+- Swift4.0
 
 ## Install
 ```
