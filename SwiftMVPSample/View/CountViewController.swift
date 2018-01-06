@@ -8,24 +8,20 @@
 
 import UIKit
 
-// ~ViewDelegate にする (UIView のサブクラスと区別するため)
 protocol CountViewDelegate: class {
     func onCountChange(num: Int)
 }
 
-class CountViewController: UIViewController {
+final class CountViewController: UIViewController {
     
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var countDownButton: UIButton!
-    @IBOutlet weak var countUpButton: UIButton!
+    @IBOutlet private weak var countLabel: UILabel!
     
     var countPresenter: CountPresenter?
     var countModel: CountModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.initialize()
+        initialize()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +30,7 @@ class CountViewController: UIViewController {
     
     private func initialize() {
         countModel = CountModel()
-        countPresenter = CountPresenter.init(view: self, model: countModel)
-        
+        countPresenter = CountPresenter(view: self, model: countModel)
     }
     
     @IBAction func onCountUpButton(_ sender: UIButton) {
@@ -46,19 +41,18 @@ class CountViewController: UIViewController {
         countPresenter?.onCountDown()
     }
     
-    // 遷移先のモデルの今使ってるモデルをわたす
+    // present model data to countVC2
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let countVC2 = segue.destination as? CountViewController2 {
-            countVC2.countModel = self.countModel
+            countVC2.countModel = countModel
         }
     }
     
 }
 
+// MARK: CountViewDelegate
 extension CountViewController: CountViewDelegate {
-    
     internal func onCountChange(num: Int) {
         countLabel.text = String(num)
     }
-    
 }

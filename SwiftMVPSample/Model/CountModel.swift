@@ -7,20 +7,21 @@
 //
 
 import Foundation
+// Not import UIKit
 
-class CountModel {
+final class CountModel {
     var num: Int
     
-    init() {
-        num = 0
+    init(_ num: Int = 0) {
+        self.num = num
     }
     
     func countUp() {
-        self.num += 1
+        num += 1
     }
     
     func countDown() {
-        self.num -= 1
+        num -= 1
     }
 
 }

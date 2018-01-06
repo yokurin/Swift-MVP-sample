@@ -7,10 +7,10 @@
 //
 
 import Foundation
+// Not import UIKit
 
-class CountPresenter {
+final class CountPresenter {
 
-    // ちがう画面(ViewController)からもカウントアップしたいときにこのPresenterを呼びだせる
     private let view: CountViewDelegate
     private let model: CountModel
         
@@ -20,7 +20,7 @@ class CountPresenter {
     }
 
     func onCountUp(){
-        //基本モデルの値の変更はモデル内でやる (他のPresenterからもCountModelを変更する場合がある)
+        // 基本モデルの値の変更はモデル内でやる (他のPresenterからもCountModelを変更する場合がある)
         model.countUp()
         view.onCountChange(num: model.num)
     }
