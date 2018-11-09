@@ -16,21 +16,17 @@ final class CountViewController: UIViewController {
     
     @IBOutlet private weak var countLabel: UILabel!
     
-    var countPresenter: CountPresenter?
+    var presenter: CountPresenter!
     var countModel: CountModel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initialize()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         countPresenter?.initCountLabel()
     }
-    
-    private func initialize() {
-        countModel = CountModel()
-        countPresenter = CountPresenter(view: self, model: countModel)
+
+    static func configure() -> CountViewController {
+        let view = CountViewController()
+        view.countModel = CountModel()
+        view.presenter = CountPresenter(view: self, model: countModel)
     }
     
     @IBAction func onCountUpButton(_ sender: UIButton) {
