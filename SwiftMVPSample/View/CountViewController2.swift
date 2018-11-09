@@ -12,7 +12,7 @@ class CountViewController2: UIViewController {
     
     @IBOutlet weak var countLabel2: UILabel!
     
-    var countPresenter: CountPresenter?
+    var presenter: CountPresenter?
     var countModel: CountModel!
     
     override func viewDidLoad() {
@@ -21,19 +21,19 @@ class CountViewController2: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        countPresenter?.initCountLabel()
+        presenter?.initCountLabel()
     }
     
     private func initialize() {
-        countPresenter = .init(view: self, model: countModel)
+        presenter = .init(view: self, model: countModel)
     }
     
     @IBAction func onCountUpButton2(_ sender: UIButton) {
-        countPresenter?.onCountUp()
+        presenter?.onCountUp()
     }
     
     @IBAction func onCountDownButton2(_ sender: UIButton) {
-        countPresenter?.onCountDown()
+        presenter?.onCountDown()
     }
     
 }

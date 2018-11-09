@@ -20,13 +20,12 @@ final class CountPresenter {
     }
 
     func onCountUp(){
-        // 基本モデルの値の変更はモデル内でやる (他のPresenterからもCountModelを変更する場合がある)
-        model.countUp()
+        model.num += 1
         view.onCountChange(num: model.num)
     }
     
     func onCountDown(){
-        model.countDown()
+        model.num -= 1
         view.onCountChange(num: model.num)
     }
     

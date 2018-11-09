@@ -16,8 +16,8 @@ final class CountViewController: UIViewController {
     
     @IBOutlet private weak var countLabel: UILabel!
     
-    var countPresenter: CountPresenter?
-    var countModel: CountModel!
+    private var presenter: CountPresenter?
+    private var countModel: CountModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +25,20 @@ final class CountViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        countPresenter?.initCountLabel()
+        presenter?.initCountLabel()
     }
     
     private func initialize() {
         countModel = CountModel()
-        countPresenter = CountPresenter(view: self, model: countModel)
+        presenter = CountPresenter(view: self, model: countModel)
     }
     
     @IBAction func onCountUpButton(_ sender: UIButton) {
-        countPresenter?.onCountUp()
+        presenter?.onCountUp()
     }
     
     @IBAction func onCountDownButton(_ sender: UIButton) {
-        countPresenter?.onCountDown()
+        presenter?.onCountDown()
     }
     
     // present model data to countVC2
