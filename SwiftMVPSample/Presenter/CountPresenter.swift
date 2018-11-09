@@ -9,27 +9,24 @@
 import Foundation
 // Not import UIKit
 
-protocol CountPresenter {
-
-}
-
 final class CountPresenter {
 
-    private weak var view: CountViewDelegate!
-    private var model: CountModel
-
-    init(view: CountViewDelegate, model: CountModel) {
+    private let view: CountViewDelegate
+    private let model: CountModel
+        
+    required init(view: CountViewDelegate, model: CountModel) {
         self.view = view
         self.model = model
     }
 
     func onCountUp(){
-        model.num += 1
+        // 基本モデルの値の変更はモデル内でやる (他のPresenterからもCountModelを変更する場合がある)
+        model.countUp()
         view.onCountChange(num: model.num)
     }
     
     func onCountDown(){
-        model.num -= 1
+        model.countDown()
         view.onCountChange(num: model.num)
     }
     

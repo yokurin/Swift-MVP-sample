@@ -1,5 +1,5 @@
 //
-//  CountModel.swift
+//  File.swift
 //  SwiftMVPSample
 //
 //  Created by Hayashi Tsubasa on 2017/01/09.
@@ -9,10 +9,19 @@
 import Foundation
 // Not import UIKit
 
-struct CountModel {
+final class CountModel {
     var num: Int
     
     init(_ num: Int = 0) {
         self.num = num
     }
+    
+    func countUp() {
+        num += 1
+    }
+    
+    func countDown() {
+        num -= 1
+    }
+
 }
